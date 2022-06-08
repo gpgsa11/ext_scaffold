@@ -1,0 +1,38 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+    <f:layout name="Content" />
+
+    <f:section name="Configuration">
+        <flux:form id="Menu" options="{group: 'FCE'}" label="Menu">
+            <flux:field.input name="Text.title" label="Title"/>
+            <flux:field.input name="Text.description" label="Description"/>
+            <flux:field.inline.fal name="Icon" label="Icon"/>
+        </flux:form>
+    </f:section>
+    <f:section name="Preview">
+        <strong>featured-services</strong>
+
+    </f:section>
+    <f:section name="Main">
+
+    <section id="featured-services" class="featured-services section-bg">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bi bi-laptop"></i></div>
+                        <h4 class="title">{Text.title}</h4>
+                        <p class="description">{Text.description}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </f:section>
+
+</div>

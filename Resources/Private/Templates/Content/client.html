@@ -1,0 +1,44 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+  <f:layout name="Content" />
+
+  <f:section name="Configuration">
+    <flux:form id="client" options="{group: 'FCE'}" label="client">
+      <flux:form.sheet name="text" label="text">
+        <flux:field.input name="title" label="title"/>
+        <flux:field.input name="subtitle" label="subtitle"/>
+      </flux:form.sheet>
+        <flux:field.inline.fal name="image" label="image" required="1" minItems="1" maxItems="8" />
+    </flux:form>
+  </f:section>
+  <f:section name="Preview">
+    <strong>client</strong>
+  </f:section>
+  <f:section name="Main">
+
+    <section id="clients" class="clients">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>{title}</h2>
+          <p>{subtitle}</p>
+        </div>
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+
+            <f:for each="{v:content.resources.fal(field: 'image')}" as="image">
+            <div class="swiper-slide"> <img src="{f:uri.image(src:image.id)}" class="img-fluid" alt=""/></div>
+            </f:for>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+
+      </div>
+    </section>
+
+  </f:section>
+</div>

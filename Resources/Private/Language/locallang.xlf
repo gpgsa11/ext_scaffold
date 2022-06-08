@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="ext_scaffold">
+        <header/>
+        <body>
+            <trans-unit id="flux.standart">
+                <source>Example page</source>
+            </trans-unit>
+            <trans-unit id="flux.standart.description">
+                <source>description</source>
+            </trans-unit>
+            <trans-unit id="flux.subpage">
+                <source>subpage</source>
+            </trans-unit>
+            <trans-unit id="flux.subpage.description">
+                <source>subpage description</source>
+            </trans-unit>
+            <trans-unit id="flux.example">
+                <source>example</source>
+            </trans-unit>
+            <trans-unit id="flux.example.description">
+                <source>example description</source>
+            </trans-unit>
+
+        </body>
+
+    </file>
+</xliff>

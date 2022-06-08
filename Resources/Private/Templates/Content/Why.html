@@ -1,0 +1,67 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+    <f:layout name="Content" />
+
+    <f:section name="Configuration">
+        <flux:form id="Why" options="{group: 'FCE'}" label="Why">
+            <flux:field.input name="title" label="title"/>
+            <flux:field.input name="description" label="description"/>
+
+        </flux:form>
+    </f:section>
+    <f:section name="Preview">
+        <strong>Why use</strong>
+    </f:section>
+
+    <f:section name="Main">
+        <section id="why-us" class="why-us">
+            <div class="container">
+
+                <div class="row no-gutters">
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <span>01</span>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <span>01</span>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <span>01</span>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <span>01</span>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <span>01</span>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 content-item">
+                        <span>01</span>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </f:section>
+    </div>

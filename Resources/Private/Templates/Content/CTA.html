@@ -1,0 +1,37 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+    <f:layout name="Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="CTA" options="{group: 'FCE'}" label="CTA">
+            <flux:field.input name="title"  label="title"/>
+            <flux:field.input name="description"  label="description"/>
+            <flux:field.input name="button"  label="button"/>
+
+        </flux:form>
+    </f:section>
+    <f:section name="Preview">
+        <strong>CTA</strong>
+
+    </f:section>
+    <f:section name="Main">
+        <section id="cta" class="cta">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-start">
+                        <h3>{title}</h3>
+                        <p> {description}</p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#">{button}</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </f:section>
+</div>

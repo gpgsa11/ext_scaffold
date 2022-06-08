@@ -1,0 +1,28 @@
+plugin.tx_ext_scaffold {
+    view {
+        templateRootPaths.0 = {plugin.tx_ext_scaffold.view.templateRootPaths.0}
+        partialRootPaths.0 = {plugin.tx_ext_scaffold.view.partialRootPaths.0}
+        layoutRootPaths.0 = {plugin.tx_ext_scaffold.view.layoutRootPaths.0}
+    }
+}
+
+page {
+    includeCSS {
+        style = EXT:ext_scaffold/Resources/Public/Css/css/style.css
+        animate = EXT:ext_scaffold/Resources/Public/Css/animate.css/animate.min.css
+        bootstrap = EXT:ext_scaffold/Resources/Public/Css/bootstrap/bootstrap.min.css
+        bootstrap-icons = EXT:ext_scaffold/Resources/Public/Css/bootstrap-icons.css
+        boxicons = EXT:ext_scaffold/Resources/Public/Css/boxicons/boxicons.min.css
+        glightbox = EXT:ext_scaffold/Resources/Public/Css/glig/glightbox.min.css
+        swiper = EXT:ext_scaffold/Resources/Public/Css/swiper-bundle.min.css
+
+    }
+    includeJSFooter{
+        bootstrap = EXT:ext_scaffold/Resources/Public/JavaScript/bootstrap/js/bootstrap.bundle.min.js
+        glightbox = EXT:ext_scaffold/Resources/Public/JavaScript/glightbox/js/glightbox.min.js
+        isotope = EXT:ext_scaffold/Resources/Public/JavaScript/isotope-layout/isotope.pkgd.min.js
+        swiper-bundle = EXT:ext_scaffold/Resources/Public/JavaScript/swiper/swiper-bundle.min.js
+        validate = EXT:ext_scaffold/Resources/Public/JavaScript/php-email-form/validate.js
+        main = EXT:ext_scaffold/Resources/Public/JavaScript/main.js
+    }
+    }

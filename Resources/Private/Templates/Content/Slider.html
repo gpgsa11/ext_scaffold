@@ -1,0 +1,57 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers">
+
+    <f:layout name="Content" />
+
+    <f:section name="Configuration">
+        <flux:form id="Slider" options="{group: 'FCE'}" label="Slider">
+            <flux:field.input name="Startpoint" label="Startpoint"/>
+            <flux:field.inline.fal name="images" label="imagesSlider" minItems="1" maxItems="5"/>
+        </flux:form>
+    </f:section>
+    <f:section name="Preview">
+        <strong>Slider</strong>
+        <br /> {headline}
+    </f:section>
+
+    <f:section name="Main">
+
+            <section id="hero">
+                <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+
+                            <f:for each="{v:content.resources.fal(field: 'images')}" as="image" iteration="iterator">
+
+                                <f:image treatIdAsReference="1" src="{image.id}" title="{image.title}" alt="{image.alternative}" class="img-responsive"/>
+                                <div class="carousel-item {f:if(condition: '{iterator.cycle} == 1', then: 'active')}" style="background-image: url({image.url})">
+                                    <div class="carousel-container">
+                                        <div class="container">
+                                            <h2 class="animate__animated animate__fadeInDown">{image.title}</h2>
+                                            <p class="animate__animated animate__fadeInUp">{image.description}</p>
+                                            <f:link.typolink parameter="{image.link}" class="btn-get-started animate__animated animate__fadeInUp scrollto"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </f:for>
+
+
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a>
+            </section>
+
+        </f:section>
+
+</div>
